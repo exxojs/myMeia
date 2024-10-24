@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background-color: #f0f0f0; /* Lighter background for a music player feel */
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    height: 600px;
+    width: 400px;
+    margin-right: 20%;
+}
+
+.background img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 50%;
+    min-height: 50%;
+    filter: blur(15px);
+    transform: scale(1.1);
+}
+
+.container {
+    height: 500px; /* Increased height for better layout */
+    width: 360px; /* Slightly wider for better spacing */
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Added padding for spacing */
+}
+
+.player-img {
+    width: 100%; /* Full width for image */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.player-img img {
+    object-fit: cover;
+    border-radius: 10px; /* Slightly less rounded corners */
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 24px; /* Adjusted font size */
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+    color: white;
+    -webkit-text-stroke: black 1px;
+}
+
+h3 {
+    font-size: 16px; /* Adjusted font size */
+    text-align: center;
+    font-weight: 700; /* Slightly lighter font weight */
+    margin: 5px 0;
+    color: black;
+}
+
+.player-progress {
+    background-color: #e0e0e0; /* Light progress bar */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 6px;
+    width: 100%; /* Full width */
+}
+
+.progress {
+    background-color: #c5332f; /* Blue progress indicator */
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; /* Start at 0% */
+    transition: width 0.1s linear;
+}
+
+.music-duration {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width for duration text */
+    margin-top: 5px; /* Space above */
+    color: grey;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: space-around; /* Space controls evenly */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above controls */
+}
+
+.fa-solid {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.fa-solid:hover {
+    filter: brightness(40%);
+}
+
+.play-button {
+    font-size: 44px;
+    position: relative;
+    bottom: 3px;
+}
+
+/*=========================================================*/
+.volume-control {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Center the slider */
+    margin-top: 60px; /* Space above the slider */
+}
+
+#volume-slider {
+    
+    width: 80%; /* Set width of the slider */
+    height: 5px; /* Height of the slider track */
+    background: #e0e0e0; /* Track color */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+#volume-slider::-webkit-slider-thumb {
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background-color: #c5332f;
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer; /* Pointer cursor */
+
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background: #c5332f; /* Thumb color */
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer; /* Pointer cursor */
+    
+}
+
+/*==========================*/
+.message{
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    padding: 1px 50px;
+    margin-top: 60px;
+  }
+  
+  .message p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 0px;
+    color: rgb(22, 22, 22);
+  }
+  
+  .message h2{
+    color: #ffffff;
+  }
+  /*=================================*/
+  .plugIns{
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    width: 100%;
+}
+
+.navbar{
+    border-radius: 4px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    padding-bottom: -5px;
+  }
+  
+  .social-icons li {
+    margin: 0 16px;
+  }
+  
+  .social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #c5332f;
+    text-decoration: none;
+    border: none;
+  }
+  
+
+  
+  .social-icons i {
+    font-size: 2em;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-icons a:hover i {
+    transform: translateY(-5px);
+  }
